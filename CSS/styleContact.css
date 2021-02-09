@@ -1,0 +1,270 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    margin: 0px auto;
+}
+
+
+nav li {
+    display: inline-block;
+    width: 160px;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    
+}
+
+nav ul {
+    text-align: center;
+    padding: 0;
+    
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+    display: inline-block; /*lägg till på alla*/
+}
+
+nav li.sel a, nav li a:hover{
+    color: #8cbad2;
+    font-style: italic;
+    
+}
+
+.headerImage {
+    background-image: url(../image/header_algave.png);
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 15px;
+    background-size: cover;
+    position: relative;
+}
+
+#main {
+    padding: 50px 50px;
+    background-color:white;
+    height: 310px;
+    width: 80%;
+    margin: auto;
+}
+
+#about{
+    float: left;
+    width: 50%;
+    text-align: center;
+    line-height: 30px;
+
+}
+
+#info{
+    float: right;
+    width: 50%;
+    text-align: center;
+}
+
+#info img{
+    height: 310px;
+    width: 310px;
+    position: relative;
+}
+
+footer{
+    text-align: center;
+    background-color:#8cbad2;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+
+/*LAGT TILL ICON*/
+.icon {
+    display: inline-block;
+    cursor: pointer;
+    display: none;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/*Contact*/
+
+h2{
+    text-align: center;
+    font-size: 20pt;
+    padding: 20px;
+    letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+.symbol{
+text-align: center;}
+
+i{
+    font-size: 30pt;
+    color: rgb(122, 121, 121);
+    padding: 0 10px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+#number, #email{
+    font-size: 15pt;
+    display: inline;
+}
+
+
+form{
+    width: 900px;
+    margin: auto;
+}
+
+
+legend{
+    font-size: 15pt;
+    padding: 6px;
+}
+
+#contactField {
+    border: 2px dotted darkgray;
+    padding: 20px;
+}
+
+
+input[type=text], select, textarea {
+    background-color: #e1eaed;
+    width: 100%;
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+    margin-top: 6px;
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+  hr{
+  border: 1px dotted #ccc;
+  margin-bottom: 20px;
+}
+  
+  input[type=submit] {
+    background-color: darkgray;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius:6px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #57C8E9;
+  }
+  
+  .contactForm {
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+  }
+
+  iframe{
+      margin-top: 20px;
+      display:block;
+      margin-left: auto;
+      margin-right: auto;
+ }
+
+  /*@media (max-width:910px){
+    input[type=text], select, textarea{
+    }
+
+    form{
+        width: 80%;
+    }
+    iframe{
+        width: 80%;
+    }
+
+  }*/
+
+  @media (max-width:500px){
+      i.fa-phone,i.fa-envelope{
+    font-size: 18px;
+    margin-bottom: 0;
+}   
+
+    #number, #email{
+        font-size: 10pt;
+        display: block;
+    }
+  }
+
+  @media (max-width: 900px){
+
+    form{
+        width: 80%;
+    }
+    iframe{
+        width: 80%;
+    }
+
+    .icon {
+        display: inline-block;
+        margin-top: 20px;
+        margin-left: 30px;
+    
+    }
+    nav {
+        height: 0;
+        transition: 1s; /* effkt för att göra övergångar mer smooth*/
+        overflow: hidden; /*allt som inte syns är gömt, dvs hela eftersom att höjden är 0*/ 
+        border: none;
+    
+    }
+    nav li {
+        width: auto;
+        margin: 2px 2%;
+        display: block;
+    
+    }
+    nav ul{
+        margin: 0;
+    
+    }
+  }
+
+  @media (min-width: 901px) { /*här för att nav inte ska vara display: none; 
+    här är det fortsatt synlig*/
+    nav {
+        height: auto !important;
+    }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/styleBooking.css">
+    <title>booking</title>
+</head>
+<body>
+
+    <div class="icon" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      
+    <nav id="menu">
+        <ul id="nav">
+            <li class="nsel">
+                <a href="home.html"> HOME</a> </li>
+            <li class="sel">
+                <a href="booking.html"> BOOKING</a> </li>
+            <li class="nsel">
+                <a href="gallery.html"> GALLERY</a> </li>
+            <li class="nsel">
+                <a href="price.html"> PRICE</a> </li>
+            <li class="nsel">
+                <a href="contact.html"> CONTACT</a> </li>
+           
+        </ul> 
+    </nav>
+
+    <header>
+        <div class="headerImage">
+            
+        </div>
+    </header>
+
+    <section id="main">
+
+        <h2>BOOK YOUR TRIP</h2>
+
+        <form action="reservation.php" method="post">
+            <fieldset id="bookingField">
+
+                <legend>Booking Form</legend>
+
+            <div class="elem-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="visitor_name" placeholder="Sofie Petersson" pattern=[A-Z\sa-z]{3,20} required>
+            </div>
+            <div class="elem-group">
+              <label for="email">Your E-mail</label>
+              <input type="email" id="email" name="visitor_email" placeholder="sofie.petersson@email.com" required>
+            </div>
+            <div class="elem-group">
+              <label for="phone">Your Phone</label>
+              <input type="tel" id="phone" name="visitor_phone" placeholder="070-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+            </div>
+            <hr>
+            
+            <div class="elem-group inlined">
+              <label for="checkin-date">Check-in Date</label>
+              <input type="date" id="checkin-date" name="checkin" required>
+            </div>
+            <div class="elem-group inlined">
+              <label for="checkout-date">Check-out Date</label>
+              <input type="date" id="checkout-date" name="checkout" required>
+            </div>
+            <div class="elem-group">
+              <label for="room-selection">Select your surf level</label>
+              <select id="room-selection" name="room_preference" required>
+                  <option value="">...</option>
+                  <option value="connecting">Beginner</option>
+                  <option value="adjoining">Intermidiate</option>
+                  <option value="adjacent">Advanced</option>
+              </select>
+            </div>
+            <div class="elem-group">
+                <label for="room-selection">Select your package</label>
+                <select id="room-selection" name="room_preference" required>
+                    <option value="">...</option>
+                    <option value="connecting">All included - 1000 $</option>
+                    <option value="adjoining">Surf lessons + Food - 800 $</option>
+                    <option value="adjacent">Surf lessons - 700 $</option>
+                </select>
+              </div>
+            <hr>
+            <div class="elem-group">
+              <label for="message">Anything Else?</label>
+              <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+            </div>
+            <button type="submit">Book Your Trip</button>
+        
+        </fieldset>
+          </form>
+
+    </section>
+
+    
+    <footer>
+        
+        <p>Contact: surfacademy@gmail.com</p>
+
+    </footer>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
