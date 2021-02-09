@@ -1,0 +1,257 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    margin: 0px auto;
+ 
+}
+
+nav li {
+  display: inline-block;
+  width: 160px;
+  height: 35px;
+  line-height: 35px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+  
+}
+
+nav ul {
+  text-align: center;
+  padding: 0;
+  
+}
+
+nav a{
+  color: black;
+  text-decoration: none;
+  display: inline-block; /*lägg till på alla*/
+}
+
+nav li.sel a, nav li a:hover{
+  color: #8cbad2;
+  font-style: italic;
+  
+}
+
+.headerImage {
+  background-image: url(../image/header_algave.png);
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 15px;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+#main {
+    padding: 50px 50px; 
+    background-color:white;
+    height: 100%;
+    width: 80%;  /*se till att denna är 80% på alla sidor*/
+    margin: auto;
+}
+#main h1, p {
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    background-color: #8cbad2;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    clear: both;
+   
+}
+/*LAGT TILL ICON*/
+.icon {
+    display: inline-block;
+    cursor: pointer;
+    display: none;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
+div.gallery {
+    background-color: #8cbad2;
+    margin: 0 auto 30px auto;
+  }
+  
+ 
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+    transition: transform 1s;
+
+  }
+  
+  div.gallery img:hover {
+    transform: scale(2.0); 
+  }
+
+  div.desc {
+    padding: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+
+/*SLIDER*/
+#slider h1 {
+  letter-spacing: 2px;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 20pt;
+  margin-top: 30px;
+  
+
+}
+
+.slide-container {
+  width: 800px;
+  height: 450px;
+  overflow: hidden; /*gömma de andra*/
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px; 
+
+}
+.image-container {
+  width: 3200px;
+  height: 450px;
+  position: relative;
+  transition: left 2s;
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -o-transition: left 2s;
+}
+.slider-image {
+  float:left;
+  margin: 0;
+  padding: 0;
+}
+.button-container {
+  top: -20px;
+  position: relative;
+
+}
+.slider-button {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: #8cbad2;
+
+}
+#slider-image-1:target ~ .image-container{
+  left: 0px;
+}
+#slider-image-2:target ~ .image-container{
+  left: -800px;
+}
+#slider-image-3:target ~ .image-container{
+  left: -1600px;
+}
+#slider-image-4:target ~ .image-container{
+  left: -2400px;
+}
+
+ 
+
+  
+  
+@media (max-width: 950px) {  
+    
+    #main {
+        height: 100%;
+        padding: 0;
+    }
+    
+    .icon {
+        display: inline-block;
+        margin-top: 20px;
+        margin-left: 30px;
+    
+    }
+    nav {
+        height: 0;
+        transition: 1s; /* effkt för att göra övergångar mer smooth*/
+        overflow: hidden; /*allt som inte syns är gömt, dvs hela eftersom att höjden är 0*/ 
+        border: none;
+    
+    }
+    nav li {
+        width: auto;
+        margin: 2px 2%;
+        display: block;
+    
+    }
+    nav ul{
+        margin: 0;
+    }  
+    .responsive {
+        width: 100%;
+        margin: 6px 0;
+      } 
+    div.gallery img:hover {
+        transform: scale(1.0); 
+      }
+    .slide-container {
+      display: none;
+    }
+  
+    }
+   
+    
+
+    @media (min-width: 951px) { /*här för att nav inte ska vara display: none; 
+        här är det fortsatt synlig*/
+        nav {
+            height: auto !important;
+        }
+    }
+    
+    

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/4d28b8107f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/styleContact.css">
+    <title>Contact</title>
+</head>
+<body>
+    <div class="icon" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      
+    <nav id="menu">
+        <ul id="nav">
+            <li class="nsel">
+                <a href="index.html"> index</a> </li>
+            <li class="nsel">
+                <a href="booking.html"> BOOKING</a> </li>
+            <li class="nsel">
+                <a href="gallery.html"> GALLERY</a> </li>
+            <li class="nsel">
+                <a href="price.html"> PRICE</a> </li>
+            <li class="sel">
+                <a href="contact.html"> CONTACT</a> </li>
+           
+        </ul> 
+    </nav>
+
+    <header>
+        
+
+        <div class="headerImage">
+            
+        </div>
+    </header>
+
+    <section>
+
+        <div class="symbol">
+            <h2>CONTACT US</h2>
+
+            <i class="fas fa-phone"></i>
+            <p id="number"> +9999999999</p>
+
+
+            <i class="fas fa-envelope"></i>
+            <p id="email"> surfacademy@gmail.com </p>
+            
+        </div>
+        
+
+        <div class="contactForm">
+            <form action="action_page.php">
+          <fieldset id="contactField">
+
+              <legend>Contact Form</legend>
+
+            <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          
+              <label for="Enquiring">Enquiring about</label>
+              <select id="Enquiring" name="Enquiring">
+                <option value="" disabled selected hidden>...</option>
+                <option value="surfclasses">Surf Classes</option>
+                <option value="surftrips">Surf Trips</option>
+                <option value="Payment">Payment</option>
+                <option value="Other">Other</option>
+              </select>
+
+              <hr>
+              
+              <label for="subject">Your message</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+
+            </fieldset>
+          
+            </form>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49372.05620024726!2d-9.377334178200439!3d39.33916974628158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1f4f3b92f46b21%3A0xaea6236803e00fa3!2sBaleal%20Island!5e0!3m2!1ssv!2spt!4v1604664282183!5m2!1ssv!2spt" width="800" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
+    </section>
+
+    <footer>
+        
+        <p>Contact: surfacademy@gmail.com</p>
+
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    margin: 0px auto;
+ 
+}
+
+
+nav li {
+  display: inline-block;
+  width: 160px;
+  height: 35px;
+  line-height: 35px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+  
+}
+
+nav ul {
+  text-align: center;
+  padding: 0;
+  
+}
+
+nav a{
+  color: black;
+  text-decoration: none;
+  display: inline-block; /*lägg till på alla*/
+}
+
+nav li.sel a, nav li a:hover{
+  color: #8cbad2;
+  font-style: italic;
+  
+}
+.headerImage {
+  background-image: url(../image/header_algave.png);
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 15px;
+  background-size: cover;
+  position: relative;
+}
+
+/*LAGT TILL ICON*/
+.icon {
+    display: inline-block;
+    cursor: pointer;
+    display: none;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
+h2{
+    text-align: center;
+    font-size: 20pt;
+    padding: 20px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+
+}
+
+form{
+    width: 900px;
+    margin: 0 auto;
+}
+
+legend{
+    font-size: 15pt;
+    padding: 6px;
+}
+
+#bookingField{
+    border: 2px dotted darkgray;
+    padding: 20px;
+}
+
+div.elem-group {
+    margin: 20px 0;
+  }
+  
+  div.elem-group.inlined {
+    width: 49%;
+    display: inline-block;
+    float: left;
+    margin-left: 1%;
+  }
+  
+  label {
+    display: block;
+    padding-bottom: 10px;
+  }
+  
+  input, select, textarea {
+    background-color: #e1eaed;
+    width: 100%;
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+    resize: vertical;
+  }
+  
+  div.elem-group.inlined input {
+    width: 95%;
+    display: inline-block;
+  }
+  
+  textarea {
+    height: 250px;
+  }
+  
+  hr {
+    border: 1px dotted #ccc;
+  }
+  
+  button {
+    padding: 12px 20px;
+    background: darkgray;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #8cbad2;
+  }
+
+
+
+footer{
+    text-align: center;
+    background-color:#8cbad2;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    clear: both;
+}
+
+@media (max-width: 900px) {  
+    .icon {
+        display: inline-block;
+        margin-top: 20px;
+        margin-left: 30px;
+    
+    }
+    nav {
+        height: 0;
+        transition: 1s; /* effkt för att göra övergångar mer smooth*/
+        overflow: hidden; /*allt som inte syns är gömt, dvs hela eftersom att höjden är 0*/ 
+        border: none;
+    
+    }
+    nav li {
+        width: auto;
+        margin: 2px 2%;
+        display: block;
+    
+    }
+    nav ul{
+        margin: 0;
+    }
+
+    form{
+        width: 80%;
+    }
+}
+
+@media (min-width: 901px) { /*här för att nav inte ska vara display: none; 
+    här är det fortsatt synlig*/
+    nav {
+        height: auto !important;
+    }
+}
+
