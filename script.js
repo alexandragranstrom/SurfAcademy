@@ -30,4 +30,5 @@ checkinElem.setAttribute("min", dateTomorrow);
 checkinElem.onchange = function () {
     checkoutElem.setAttribute("min", this.value);
 }
-  
+
+

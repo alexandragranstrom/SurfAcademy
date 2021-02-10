@@ -71,6 +71,10 @@ footer{
     clear: both;
    
 }
+footer a {
+  color: white;
+  text-decoration: none;
+}
 /*LAGT TILL ICON*/
 .icon {
     display: inline-block;
@@ -126,6 +130,7 @@ div.gallery {
     padding: 15px;
     text-align: center;
     letter-spacing: 1px;
+    color: white;
   }
   
   * {

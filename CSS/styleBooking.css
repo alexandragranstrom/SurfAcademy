@@ -168,6 +168,10 @@ footer{
     letter-spacing: 2px;
     clear: both;
 }
+footer a {
+  color: white;
+  text-decoration: none;
+}
 
 @media (max-width: 900px) {  
     .icon {

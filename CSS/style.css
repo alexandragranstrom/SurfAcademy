@@ -90,6 +90,10 @@ footer{
     clear: both;
    
 }
+footer a {
+    color: white;
+    text-decoration: none;
+  }
 /*LAGT TILL ICON*/
 .icon {
     display: inline-block;
